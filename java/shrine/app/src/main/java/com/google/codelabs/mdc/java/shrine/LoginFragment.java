@@ -33,9 +33,10 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 if(!isPasswordValid(passwordEditText.getText())){
                     passwordTextInput.setError(getString(R.string.shr_error_password));
-                    ((NavigationHost) getActivity()).navigateTo(new ProductGridFragment(), false);
+
                 } else{
                     passwordTextInput.setError(null);
+                    ((NavigationHost) getActivity()).navigateTo(new ProductGridFragment(), false);
                 }
             }
         });
